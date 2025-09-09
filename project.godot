@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="JPG2 Project"
-run/main_scene="uid://05wdjxqdm5il"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneSwitcher="*res://scripts/util/scene_switcher.gd"
+AudioPlayer="*res://audio_player.gd"
 
 [dotnet]
 
