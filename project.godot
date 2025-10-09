@@ -23,6 +23,7 @@ buses/default_bus_layout=""
 
 SceneSwitcher="*res://scripts/util/scene_switcher.gd"
 AudioPlayer="*res://scripts/util/audio_player.gd"
+Globals="*res://scripts/globals.gd"
 
 [dotnet]
 

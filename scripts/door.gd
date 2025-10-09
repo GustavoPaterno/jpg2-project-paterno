@@ -20,4 +20,5 @@ func _process(delta):
 	if player_can_interact and Input.is_action_just_pressed("interact"):
 		Globals.target_door_id = target_id
 		Globals.transport_to_target()
-		get_tree().call_deferred("change_scene_to_file", target_scene_path)
+		if target_scene_path != null:
+			get_tree().call_deferred("change_scene_to_file", target_scene_path)
