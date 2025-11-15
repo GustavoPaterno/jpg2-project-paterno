@@ -10,6 +10,12 @@ var newPosition = Vector2()
 var mouse_in = false
 var chosen = false
 
+func _ready():
+	if has_signal("mouse_entered"):
+		connect("mouse_entered", Callable(self, "_on_mouse_entered"))
+	if has_signal("mouse_exited"):
+		connect("mouse_exited", Callable(self, "_on_mouse_exited"))
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if chosen and event.is_pressed() && mouse_in:
