@@ -8,7 +8,6 @@ func _process(delta):
 
 	if int(Input.is_action_just_pressed("mouse_right_click")):
 		$WriteButtom.visible = !$WriteButtom.visible
-		print("clicou",$WriteButtom.visible)
 
 func _on_area_2d_mouse_entered():
 	mouse_in = true

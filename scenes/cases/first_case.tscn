@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://c2tu6ahdq5vl4"]
+[gd_scene load_steps=17 format=4 uid="uid://c2tu6ahdq5vl4"]
 
 [ext_resource type="Texture2D" uid="uid://m7pdmgqugy0h" path="res://assets/kitchen assets/kitchen assets/Island/Island3.png" id="1_0lq4y"]
 [ext_resource type="PackedScene" uid="uid://dw1h5j4mr726e" path="res://resources/components/drag_and_drop_component.tscn" id="1_1g8ti"]
@@ -29,6 +29,9 @@ line_spacing = 0.0
 font_size = 11
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_1hi2x"]
+font_size = 12
+
 [node name="FirstCase" type="Node2D"]
 script = ExtResource("1_42o0s")
 
@@ -40,6 +43,7 @@ tile_set = SubResource("TileSet_42o0s")
 [node name="DragAndDrop" parent="." instance=ExtResource("1_1g8ti")]
 
 [node name="GrabbablePencil" type="CharacterBody2D" parent="DragAndDrop"]
+position = Vector2(-22, -22)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("2_uq2ah")
@@ -60,7 +64,7 @@ script = ExtResource("4_a7jp4")
 metadata/_custom_type_script = "uid://cwnwd6i3jfob0"
 
 [node name="Doc_1" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(334, 210)
+position = Vector2(207, 228)
 scale = Vector2(0.4, 0.52)
 collision_mask = 2
 input_pickable = true
@@ -73,12 +77,14 @@ texture = ExtResource("4_0lq4y")
 [node name="RelevantAreaHighlighter2" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2" instance=ExtResource("9_1hi2x")]
 position = Vector2(-70, -84.6154)
 scale = Vector2(-1.62915, 0.298444)
-areaGroup = "1"
+area_group = "1"
+correct_answer_msg = "- Debora eh linda d+"
+wrong_answer_msg = "- Debora coco"
 
 [node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2" instance=ExtResource("9_1hi2x")]
 position = Vector2(-2.5, -103.846)
 scale = Vector2(4.96396, 0.284879)
-areaGroup = "1"
+area_group = "1"
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2"]
 offset_left = -101.0
@@ -145,7 +151,9 @@ metadata/_edit_use_anchors_ = true
 [node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_2/LargePaper3" instance=ExtResource("9_1hi2x")]
 position = Vector2(-72.5, -103.846)
 scale = Vector2(-1.44356, 0.244996)
-areaGroup = "2"
+area_group = "2"
+correct_answer_msg = "- janeiro"
+wrong_answer_msg = "- janheiro"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
 light_mask = 2
@@ -164,15 +172,17 @@ metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 texture = ExtResource("4_0lq4y")
 
 [node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1" instance=ExtResource("9_1hi2x")]
-position = Vector2(17.5, -5.76929)
+position = Vector2(17.5, -5.76923)
 scale = Vector2(3.66164, -0.278924)
-areaGroup = "3"
+area_group = "3"
 
 [node name="RelevantAreaHighlighter2" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1" instance=ExtResource("9_1hi2x")]
 position = Vector2(-90, 9.61548)
 rotation = 3.14159
 scale = Vector2(0.741599, -0.256004)
-areaGroup = "3"
+area_group = "3"
+correct_answer_msg = "- domingo top"
+wrong_answer_msg = "- segunda top"
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1"]
 offset_left = -101.0
@@ -229,11 +239,14 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("9_one6m")
 
 [node name="Label" type="Label" parent="DragAndDrop/RelevantAreaController/List/LargePaper1/ResponseList"]
-offset_left = 12.0
-offset_top = 208.0
-offset_right = 52.0
-offset_bottom = 231.0
-text = "teste"
+offset_left = -100.0
+offset_top = -113.0
+offset_right = 98.0
+offset_bottom = 124.0
+text = "
+"
+label_settings = SubResource("LabelSettings_1hi2x")
+autowrap_mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/List"]
 light_mask = 2
