@@ -3,6 +3,8 @@ extends Node
 var target_scene_path = ''
 var target_door_id = ''
 
+var relevant_area_list = []
+
 func transport_to_target():
 	var player = get_tree().root.find_child("Player", true, false)
 	var doors = get_tree().get_nodes_in_group("doors")
