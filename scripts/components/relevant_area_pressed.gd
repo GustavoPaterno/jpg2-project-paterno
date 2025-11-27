@@ -10,10 +10,16 @@ var current_select_area: String
 func _ready():
 	add_to_group("relevant_area_controller")
 	var all = get_tree().get_nodes_in_group("relevant_area_group")
-	for child in all:
+	for child: RelevantArea in all:
+
+		if Globals.relevant_area_list.find(child.area_group) == -1:
+			Globals.relevant_area_list.append(child.area_group)
+
 		if (child is RelevantArea):
 			child.connect("on_mouse_entered", Callable(self, "_on_child_mouse_entered"))
 			child.connect("on_mouse_exited", Callable(self, "_on_child_mouse_exited"))
+	
+	print(Globals.relevant_area_list)
 
 func _process(delta):
 	if !mouse_in: return
