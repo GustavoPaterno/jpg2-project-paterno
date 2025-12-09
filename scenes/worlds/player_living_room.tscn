@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://6orc2e2nwdiu"]
+[gd_scene load_steps=20 format=4 uid="uid://6orc2e2nwdiu"]
 
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_176wk"]
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_ugjv4"]
@@ -1388,6 +1388,24 @@ texture = ExtResource("3_o50fj")
 [sub_resource type="TileSet" id="TileSet_475jc"]
 sources/0 = SubResource("TileSetAtlasSource_n26dm")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o50fj"]
+texture = ExtResource("2_xydvn")
+3:24/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+5:24/0 = 0
+4:24/0 = 0
+3:26/0 = 0
+4:26/0 = 0
+5:26/0 = 0
+2:26/0 = 0
+2:25/0 = 0
+2:24/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wklvq"]
+sources/0 = SubResource("TileSetAtlasSource_o50fj")
+
 [node name="PlayerLivingRoom" type="Node2D"]
 
 [node name="PlayerHud" parent="." instance=ExtResource("1_ugjv4")]
@@ -1408,6 +1426,10 @@ tile_set = SubResource("TileSet_7es3i")
 
 [node name="RoomFornitureFront" type="TileMapLayer" parent="Landscape"]
 tile_set = SubResource("TileSet_475jc")
+
+[node name="Shadows" type="TileMapLayer" parent="Landscape"]
+tile_map_data = PackedByteArray("AAD/////AAADABgAAAAAAP//AAADABoAAAABAP//AAAEABoAAAACAP//AAAFABoAAAD+////AAADABgAAAD3////AAADABoAAAD4////AAAEABoAAAD5////AAAFABoAAADu////AAADABgAAADr//7/AAAFABgAAADr////AAAEABkAAADj////AAADABoAAADk////AAAEABoAAADl////AAAEABoAAADm////AAADABoAAADn////AAAEABoAAADo////AAAFABoAAADh////AAAFABgAAADd////AAAFABgAAAA=")
+tile_set = SubResource("TileSet_wklvq")
 
 [node name="Player" parent="." instance=ExtResource("5_xydvn")]
 z_index = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dycfund0p6tdf"]
+[gd_scene load_steps=19 format=4 uid="uid://dycfund0p6tdf"]
 
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="1_5gutt"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_qias2"]
@@ -1244,6 +1244,23 @@ texture = ExtResource("2_qias2")
 [sub_resource type="TileSet" id="TileSet_afakg"]
 sources/0 = SubResource("TileSetAtlasSource_df18r")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qias2"]
+texture = ExtResource("1_5gutt")
+3:24/0 = 0
+3:25/0 = 0
+3:26/0 = 0
+4:26/0 = 0
+5:26/0 = 0
+5:25/0 = 0
+5:24/0 = 0
+4:24/0 = 0
+4:25/0 = 0
+2:26/0 = 0
+2:25/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_18syf"]
+sources/0 = SubResource("TileSetAtlasSource_qias2")
+
 [node name="PlayerOfficeRoom" type="Node2D"]
 
 [node name="Landscape" type="Node2D" parent="."]
@@ -1267,5 +1284,9 @@ tile_set = SubResource("TileSet_tyrtj")
 [node name="RoomForniture3" type="TileMapLayer" parent="Landscape"]
 tile_map_data = PackedByteArray("AAD5//7/AAAJAAcAAAD5////AAAJAAgAAAA=")
 tile_set = SubResource("TileSet_afakg")
+
+[node name="Shadows" type="TileMapLayer" parent="Landscape"]
+tile_map_data = PackedByteArray("AADz//3/AAADABgAAADz//7/AAAEABkAAADz////AAAEABkAAADw//7/AAADABgAAADw////AAAEABgAAAD2//3/AAAFABgAAAD2//7/AAAEABkAAAD2////AAAEABkAAAA=")
+tile_set = SubResource("TileSet_18syf")
 
 [node name="Player" parent="." instance=ExtResource("3_18syf")]
