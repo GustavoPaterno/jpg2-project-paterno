@@ -1,11 +1,14 @@
-[gd_scene load_steps=20 format=4 uid="uid://6orc2e2nwdiu"]
+[gd_scene load_steps=27 format=4 uid="uid://n3gxf6olmyw2"]
 
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_176wk"]
-[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_ugjv4"]
+[ext_resource type="PackedScene" path="res://resources/ui/player_hud.tscn" id="1_ugjv4"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_xydvn"]
 [ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="3_o50fj"]
 [ext_resource type="Texture2D" uid="uid://d2s8j83vs8cxm" path="res://assets/mp_house_interiors_tileset_pack/kitchen.png" id="4_wklvq"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="5_xydvn"]
+[ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="6_ugjv4"]
+[ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="8_b5m8d"]
+[ext_resource type="PackedScene" path="res://resources/components/dialog_provider.tscn" id="9_882ho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wmaw"]
 texture = ExtResource("1_176wk")
@@ -1246,10 +1249,15 @@ texture = ExtResource("2_xydvn")
 18:28/0 = 0
 19:28/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wshbk"]
+texture = ExtResource("6_ugjv4")
+5:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_7es3i"]
 sources/0 = SubResource("TileSetAtlasSource_p3rps")
 sources/1 = SubResource("TileSetAtlasSource_1hgx5")
 sources/2 = SubResource("TileSetAtlasSource_krubi")
+sources/3 = SubResource("TileSetAtlasSource_wshbk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n26dm"]
 texture = ExtResource("3_o50fj")
@@ -1385,8 +1393,13 @@ texture = ExtResource("3_o50fj")
 15:11/0 = 0
 16:11/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7es3i"]
+texture = ExtResource("6_ugjv4")
+5:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_475jc"]
 sources/0 = SubResource("TileSetAtlasSource_n26dm")
+sources/1 = SubResource("TileSetAtlasSource_7es3i")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o50fj"]
 texture = ExtResource("2_xydvn")
@@ -1405,6 +1418,12 @@ texture = ExtResource("2_xydvn")
 
 [sub_resource type="TileSet" id="TileSet_wklvq"]
 sources/0 = SubResource("TileSetAtlasSource_o50fj")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n26dm"]
+size = Vector2(33, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugjv4"]
+size = Vector2(34, 42)
 
 [node name="PlayerLivingRoom" type="Node2D"]
 
@@ -1425,6 +1444,7 @@ tile_map_data = PackedByteArray("AAAAAP7/AAABAAEAAAAAAP//AAABAAIAAAABAP7/AAACAAE
 tile_set = SubResource("TileSet_7es3i")
 
 [node name="RoomFornitureFront" type="TileMapLayer" parent="Landscape"]
+tile_map_data = PackedByteArray("AADq//7/AQAFAAEAAAA=")
 tile_set = SubResource("TileSet_475jc")
 
 [node name="Shadows" type="TileMapLayer" parent="Landscape"]
@@ -1433,3 +1453,36 @@ tile_set = SubResource("TileSet_wklvq")
 
 [node name="Player" parent="." instance=ExtResource("5_xydvn")]
 z_index = 1
+
+[node name="MomLetter" type="Node2D" parent="."]
+position = Vector2(-343, -23)
+
+[node name="InteractableComponent" type="Node2D" parent="MomLetter"]
+script = ExtResource("8_b5m8d")
+metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
+
+[node name="Area2D" type="Area2D" parent="MomLetter/InteractableComponent"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MomLetter/InteractableComponent/Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_n26dm")
+
+[node name="DialogProvider" parent="MomLetter" instance=ExtResource("9_882ho")]
+dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
+context = "dialog-demonstration-1"
+
+[node name="BathroomDoor" type="Node2D" parent="."]
+
+[node name="InteractableComponent" type="Node2D" parent="BathroomDoor"]
+position = Vector2(-48, -21)
+script = ExtResource("8_b5m8d")
+metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
+
+[node name="Area2D" type="Area2D" parent="BathroomDoor/InteractableComponent"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BathroomDoor/InteractableComponent/Area2D"]
+shape = SubResource("RectangleShape2D_ugjv4")
+
+[node name="DialogProvider" parent="BathroomDoor" instance=ExtResource("9_882ho")]
+dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
+context = "dialog-demonstration-1"
