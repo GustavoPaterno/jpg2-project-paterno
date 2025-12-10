@@ -73,19 +73,19 @@
 			  "Text": "Sobre o alvará de construção que Joana obteve em 2018, qual afirmação é adequada?",
 			  "Options": [
 				{
-				  "Placeholder": "Se torna difícil resolver esse caso por ter um conflito de normas constitucionais-princípio.",
+				  "Placeholder": "Ele garante a Joana o direito permanente de construir, mesmo contra leis futuras.",
 				  "Goes": "segundo-dialogo-caso-um",
 				},
 				{
-				  "Placeholder": "Porque basta aplicar a regra literal da Constituição para resolver, não há nada complexo.",
+				  "Placeholder": "Ele impede completamente qualquer fiscalização ambiental posterior.",
 				  "Goes": "segundo-dialogo-caso-um"
 				},
 				{
-				  "Placeholder": "Porque só precisamos ver qual artigo aparece primeiro na Constituição e seguir ele.",
+				  "Placeholder": "Ele foi válido quando emitido, mas sua eficácia futura pode ser limitada por normas ambientais superiores criadas depois.",
 				  "Goes": "segundo-dialogo-caso-um"
 				},
 				{
-				  "Placeholder": "Porque envolve princípios constitucionais que precisam ser ponderados, mas nesse caso a solução deve favorecer automaticamente o direito mais forte.",
+				  "Placeholder": "Ele perde automaticamente toda validade após 12 meses, mesmo que a obra tenha sido iniciada dentro do prazo.",
 				  "Goes": "segundo-dialogo-caso-um"
 				}
 			  ]
