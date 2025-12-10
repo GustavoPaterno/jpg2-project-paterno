@@ -11,6 +11,5 @@ func _on_button_pressed() -> void:
 func teste(_arr):
 	Globals.ResponseArr.clear()
 	Globals.ResponseArr.append_array(_arr)
-	Globals.push("res://scenes/demos/final_scene.tscn")
-
-	
+	SceneSwitcher.switch_scene("res://scenes/demos/final_scene.tscn")
+	# Globals.push("res://scenes/demos/final_scene.tscn")
