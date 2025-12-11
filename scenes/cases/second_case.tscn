@@ -167,7 +167,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialogProvider" parent="." instance=ExtResource("10_psjvf")]
 dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "caso-um"
+context = "caso-dois"
 
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_exited"]

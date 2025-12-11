@@ -40,7 +40,7 @@ texture = ExtResource("4_0lq4y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
 light_mask = 2
-position = Vector2(0, 11.5)
+position = Vector2(0, 12)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
 
