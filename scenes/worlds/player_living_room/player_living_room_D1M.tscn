@@ -1497,4 +1497,4 @@ target_scene_path = "res://scenes/worlds/main_city/main_city_M.tscn"
 [node name="PlayerRoomDoor" parent="." groups=["doors"] instance=ExtResource("10_0bp6h")]
 position = Vector2(112, -28)
 door_id = "2"
-target_scene_path = "res://scenes/worlds/player_room_map/player_room_map_M.tscn"
+target_scene_path = "res://scenes/worlds/player_room_map/player_room_map_D1M.tscn"
