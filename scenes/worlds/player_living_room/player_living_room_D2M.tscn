@@ -1457,8 +1457,8 @@ position = Vector2(-1, -18)
 shape = SubResource("RectangleShape2D_r61gk")
 
 [node name="DialogProvider" parent="MotherNPC" instance=ExtResource("8_iaf5o")]
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "dialog-demonstration-1"
+dialog_json_file = "res://assets/dialogs/source/player_living_room/player_living_room_D2M.json"
+context = "good-morning-mom"
 
 [node name="BathroomDoor" type="Node2D" parent="."]
 position = Vector2(-48, -22)
@@ -1473,8 +1473,8 @@ metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
 shape = SubResource("RectangleShape2D_b52dl")
 
 [node name="DialogProvider" parent="BathroomDoor" instance=ExtResource("8_iaf5o")]
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "dialog-demonstration-1"
+dialog_json_file = "res://assets/dialogs/source/player_living_room/player_living_room_D1M.json"
+context = "bathroom-door"
 
 [node name="OutSideDoor" parent="." instance=ExtResource("11_oryli")]
 position = Vector2(-608, -28)
