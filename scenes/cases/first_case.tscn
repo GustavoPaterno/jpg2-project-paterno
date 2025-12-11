@@ -43,7 +43,6 @@ light_mask = 2
 position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_4"]
 offset_left = -70.0
@@ -85,7 +84,6 @@ light_mask = 2
 position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
 offset_left = -70.0
@@ -127,7 +125,6 @@ light_mask = 2
 position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
 offset_left = -70.0
@@ -171,7 +168,6 @@ light_mask = 2
 position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
 offset_left = -70.0

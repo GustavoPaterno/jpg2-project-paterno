@@ -38,13 +38,6 @@ position = Vector2(6.00815e-05, 12)
 scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("5_ociyq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
-light_mask = 2
-position = Vector2(0, 11.5)
-scale = Vector2(1.44721, 1.27299)
-shape = SubResource("RectangleShape2D_7mfux")
-disabled = true
-
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
 offset_left = -70.0
 offset_top = -78.0
@@ -70,6 +63,12 @@ horizontal_alignment = 1
 uppercase = true
 metadata/_edit_use_anchors_ = true
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_7mfux")
+
 [node name="Doc_2" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
 position = Vector2(304, 131)
 collision_mask = 2
@@ -87,7 +86,6 @@ light_mask = 2
 position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_7mfux")
-disabled = true
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
 offset_left = -70.0
@@ -126,13 +124,6 @@ position = Vector2(6.00815e-05, 12)
 scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("5_ociyq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
-light_mask = 2
-position = Vector2(0, 11.5)
-scale = Vector2(1.44721, 1.27299)
-shape = SubResource("RectangleShape2D_7mfux")
-disabled = true
-
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
 offset_left = -70.0
 offset_top = -78.0
@@ -157,6 +148,12 @@ text = "Relato dos Fatos: 1"
 horizontal_alignment = 1
 uppercase = true
 metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_7mfux")
 
 [node name="DialogView" parent="." instance=ExtResource("9_8wvqs")]
 z_index = 10
