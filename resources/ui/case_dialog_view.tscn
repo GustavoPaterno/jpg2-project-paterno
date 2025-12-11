@@ -22,7 +22,8 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -200.0
 offset_top = -150.0
-offset_right = 200.0
+offset_right = 185.0
+offset_bottom = -42.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -30,8 +31,8 @@ grow_vertical = 0
 layout_mode = 0
 offset_left = 7.0
 offset_top = 8.0
-offset_right = 753.0
-offset_bottom = 278.0
+offset_right = 717.0
+offset_bottom = 188.0
 scale = Vector2(0.521626, 0.511839)
 
 [node name="Title" type="RichTextLabel" parent="Background/VBoxContainer"]
@@ -42,7 +43,8 @@ theme_override_fonts/italics_font = ExtResource("2_614vd")
 theme_override_fonts/bold_italics_font = ExtResource("2_614vd")
 theme_override_fonts/bold_font = ExtResource("2_614vd")
 theme_override_font_sizes/normal_font_size = 25
-text = "asdasd"
+text = "
+"
 fit_content = true
 
 [node name="Text" type="RichTextLabel" parent="Background/VBoxContainer"]
@@ -50,7 +52,8 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_614vd")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "asdasd"
+text = "
+"
 fit_content = true
 
 [node name="Options" type="VBoxContainer" parent="Background/VBoxContainer"]

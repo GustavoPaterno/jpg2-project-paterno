@@ -196,10 +196,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialogView" parent="." instance=ExtResource("10_1hi2x")]
 z_index = 10
-offset_left = 201.0
-offset_top = 401.0
-offset_right = 201.0
-offset_bottom = 401.0
+offset_left = 207.0
+offset_top = 434.0
+offset_right = 207.0
+offset_bottom = 434.0
 scale = Vector2(0.994096, 1.00483)
 opt_button_scene = "res://resources/ui/case_option_button.tscn"
 metadata/_edit_use_anchors_ = true
